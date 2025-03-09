@@ -8,7 +8,10 @@ function App() {
   const [counter , setCounter] = useState(0);
 
   function addValue() {
-    setCounter(counter + 5);
+    setCounter(counter+5);
+    // setCounter((counter)=>counter + 5); 
+    // setCounter((counter)=>counter + 5); 
+
   }
   function removeValue() {
     setCounter(counter - 5);
