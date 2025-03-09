@@ -1,10 +1,11 @@
 import React from 'react'
+import Chai from './chai'
 import './App.css'
 
 const App = () => {
   return (
     <div>
-      <h1>Hello</h1>
+      <Chai/>
     </div>
   )
 }
