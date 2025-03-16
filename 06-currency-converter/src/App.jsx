@@ -5,14 +5,14 @@ import useCurrencyInfo from "./hooks/useCurrencyInfo";
 
 function App() {
   const [amount, setAmount] = useState(0);
-  const [from, setFrom] = useState("USD");
-  const [to, setTo] = useState("INR");
+  const [from, setFrom] = useState("usd");
+  const [to, setTo] = useState("inr");
   const [convertedAmount, setConvertedAmount] = useState(0);
 
   const currencyInfo = useCurrencyInfo(from);
   const options = Object.keys(currencyInfo);
 
-  const swap = () => {
+  const swap = () => { 
     setFrom(to);
     setTo(from);
     setConvertedAmount(amount);
@@ -58,7 +58,7 @@ function App() {
             <div className="w-full mt-1 mb-4">
               <InputBox label="To"  amount={convertedAmount} currencyOptions={options}
               onCurrencyChange={(currency) => setTo(currency)} 
-              selectCurrency={from}
+              selectCurrency={to}
               amountDisable
            
               />
